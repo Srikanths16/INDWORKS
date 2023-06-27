@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORLD CLOCK</title>
+    <style>
+
+        body{
+            background-color: #2fe3bf;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display:list-item;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .heading{
+            font-style: Bold;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            color: #000;
+            margin-top: 50px;
+        }
+        .clock:hover{
+            background-color: #435e61;
+        }
+        .clock{
+        
+            background-color: #c2cd2d;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;   
+            text-align: center;
+            
+            margin: 10%;
+            flex-basis: 20px;
+        }
+        .clock h1{
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        ].clock p{
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class = "heading">
+        <h1>INTERNATIONAL WORLD CLOCK TIME</h1>
+    </div>
+    <div class="clock">
+        <h1>New York</h1>
+        <p id="new-york-time"></p>
+      </div>
+    
+      <div class="clock">
+        <h1>London</h1>
+        <p id="london-time"></p>
+      </div>
+    
+      <div class="clock">
+        <h1>Tokyo</h1>
+        <p id="tokyo-time"></p>
+      </div>
+    
+      <div class="clock">
+        <h1>Sydney</h1>
+        <p id="sydney-time"></p>
+      </div>
+
+      
+    
+      <script>
+        function updateTime(timeElementId, timeZone) {
+          var currentTime = new Date().toLocaleString('en-US', { timeZone: timeZone });
+          document.getElementById(timeElementId).textContent = currentTime;
+        }
+    
+        
+        setInterval(function() {
+          updateTime('new-york-time', 'America/New_York');
+          updateTime('london-time', 'Europe/London');
+          updateTime('tokyo-time', 'Asia/Tokyo');
+          updateTime('sydney-time', 'Australia/Sydney');
+        }, 1000);
+      </script>
+    </body>
+    </html>
+    

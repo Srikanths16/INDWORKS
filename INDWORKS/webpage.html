@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Form Page</title>
+  <style>
+ 
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("IMAGRE.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: none; 
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    
+    
+    label {
+      display: block;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+
+    }
+
+   
+
+    /* Responsive Styling */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+      
+      input[type="submit"] {
+        font-size: 14px;
+
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LOGIN <FORM></FORM></h1>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="john abraham" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="sample@indworks.com" required>
+      </div>
+      <div class="form-group">
+        <label for="Mobile Number">Mobile Number:</label>
+        <input type="number" id="number" name="mobile" placeholder="9876543210" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="chennai, TamilNadu, India" required></textarea>
+      </div>
+      
+
+    <div class="submit">
+      <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+    </div>
+    </form>
+  </div>
+
+  <script>
+    // Example JavaScript code
+    var contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Handle form submission logic here
+      alert('THANKYOU! your Account has been created successfully');
+    });
+  </script>
+</body>
+</html>
